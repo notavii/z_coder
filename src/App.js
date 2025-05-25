@@ -1,6 +1,6 @@
 import "./App.css";
 import LoginForm from "./components/LoginForm";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from "./components/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -10,16 +10,16 @@ function Home() {
 
 function App() {
   return (
-    <Router basename="/z_coder">
+    <Router >
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Dashboard />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route path="*" element={<div>404 Not Found</div>} />
