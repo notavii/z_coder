@@ -10,12 +10,12 @@ function Home() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/z_coder">
       <Routes>
-        <Route path="/z_coder/" element={<LoginForm />} />
-        <Route path="/z_coder/login" element={<LoginForm />} />
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route
-          path="/z_coder/dashboard"
+          path="/dashboard"
           element={
             <ProtectedRoute>
               <Dashboard />
