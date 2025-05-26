@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import "./LoginForm.css"
+
+
 
 
 export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="container">
+    <div className="container" >
       <div className="form-container">
         <div className="form-toggle">
           <button
@@ -28,7 +31,7 @@ export default function LoginForm() {
               <h2>Login Form</h2>
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
-              <a href="#">Forgot Password</a>
+              <a href="/">Forgot Password</a>
               <button>Login</button>
               <p>
                 Not a Member?{" "}

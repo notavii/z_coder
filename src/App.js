@@ -1,8 +1,8 @@
-import "./App.css";
-import LoginForm from "./components/LoginForm";
+// import "./App.css";
+import LoginForm from "./components/LoginForm/LoginForm";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import UserDashboard from "./components/UserDashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
+import UserDashboard from "./components/UserDashboard/UserDashboard";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function Home() {
   return <div>Home Page</div>;
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
-          path="/UserDashboard"
+          path="/dashboard"
           element={
             // <ProtectedRoute>
               <UserDashboard />
