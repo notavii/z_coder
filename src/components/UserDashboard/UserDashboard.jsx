@@ -1,9 +1,17 @@
 import React from 'react';
 import './UserDashboard.css';
-import bg from '../../assets/bg-dashboard.jpg';
+import bg from '../assets/bg.jpg';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function UserDashboard() {
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+    navigate("/Questions");
+  };
+
   return (
     <div className="dashboard-container" style={{ backgroundImage: `url(${bg})` }}>
         
@@ -40,7 +48,7 @@ export default function UserDashboard() {
 
 
             <div className="start_learning">
-              <button className="my-button">start coding</button>
+              <button className="my-button" onClick={handleClick}>start coding</button>
             </div>
 
 
