@@ -9,6 +9,7 @@ export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
+    <div className="login-background">
     <div className="container" >
       <div className="form-container">
         <div className="form-toggle">
@@ -54,6 +55,7 @@ export default function LoginForm() {
           </>
         )}
       </div>
+    </div>
     </div>
   )
 }

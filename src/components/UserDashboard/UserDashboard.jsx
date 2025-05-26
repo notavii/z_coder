@@ -1,6 +1,6 @@
 import React from 'react';
 import './UserDashboard.css';
-import bg from '../assets/bg.jpg';
+import bg from '../../assets/bg-dashboard.jpg';
 import { useNavigate } from 'react-router-dom';
 
 

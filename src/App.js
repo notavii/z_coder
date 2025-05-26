@@ -1,8 +1,9 @@
 // import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import UserDashboard from "./components/UserDashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
+import UserDashboard from "./components/UserDashboard/UserDashboard";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import Questions from "./components/Questions/Questions"
 
 function Home() {
   return <div>Home Page</div>;
@@ -27,7 +28,7 @@ function App() {
           path="/Questions"
           element={
             // <ProtectedRoute>
-              <Questions />
+              <Questions/>
             // </ProtectedRoute>
           }
         />
