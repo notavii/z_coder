@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
-          path="/dashboard"
+          path="/UserDashboard"
           element={
             // <ProtectedRoute>
               <UserDashboard />
