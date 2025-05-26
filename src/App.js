@@ -1,7 +1,7 @@
 import "./App.css";
 import LoginForm from "./components/LoginForm";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from "./components/Dashboard";
+import UserDashboard from "./components/UserDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function Home() {
@@ -15,10 +15,10 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
-          path="/dashboard"
+          path="/UserDashboard"
           element={
             // <ProtectedRoute>
-              <Dashboard />
+              <UserDashboard />
             // </ProtectedRoute>
           }
         />
