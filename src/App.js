@@ -1,8 +1,8 @@
 // import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import UserDashboard from "./components/UserDashboard/UserDashboard";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import UserDashboard from "./components/UserDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function Home() {
   return <div>Home Page</div>;
@@ -22,6 +22,16 @@ function App() {
             // </ProtectedRoute>
           }
         />
+
+         <Route
+          path="/Questions"
+          element={
+            // <ProtectedRoute>
+              <Questions />
+            // </ProtectedRoute>
+          }
+        />
+
         <Route path="*" element={<div>404 Not Found</div>} />
 
       </Routes>
