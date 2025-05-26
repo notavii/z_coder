@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
-          path="/UserDashboard"
+          path="/dashboard"
           element={
             // <ProtectedRoute>
               <UserDashboard />
@@ -25,7 +25,7 @@ function App() {
         />
 
          <Route
-          path="/Questions"
+          path="/questions"
           element={
             // <ProtectedRoute>
               <Questions/>
