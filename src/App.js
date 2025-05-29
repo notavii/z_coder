@@ -1,6 +1,6 @@
 // import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from "./components/context/AuthContext";
 import UserDashboard from "./components/UserDashboard/UserDashboard";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
@@ -13,7 +13,7 @@ function App() {
 
     <AuthProvider>
 
-    <Router basename="/z_coder" >
+    <Router>
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
