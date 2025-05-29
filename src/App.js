@@ -1,35 +1,37 @@
 // import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from "./components/context/AuthContext";
 import UserDashboard from "./components/UserDashboard/UserDashboard";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Questions from "./components/Questions/Questions"
 
-function Home() {
-  return <div>Home Page</div>;
-}
+
 
 function App() {
   return (
-    <Router >
+
+    <AuthProvider>
+
+    <Router basename="/z_coder" >
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route
           path="/dashboard"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <UserDashboard />
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
 
          <Route
           path="/questions"
           element={
-            // <ProtectedRoute>
+            <ProtectedRoute>
               <Questions/>
-            // </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
 
@@ -37,7 +39,10 @@ function App() {
 
       </Routes>
     </Router>
+    </AuthProvider>
   );
+
+  
 }
 
 export default App;
