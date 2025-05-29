@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios'
+// const jwt = require ("jsonwebtoken");
 
 const AuthContext = createContext();
 
@@ -54,7 +55,7 @@ export const AuthProvider = ({children}) =>{
 
     const logout = () => {
         localStorage.removeItem('token');
-        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
         delete axios.defaults.headers.common['Authorization'];
         setUser(null);
 
